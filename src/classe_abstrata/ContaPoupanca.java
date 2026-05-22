@@ -1,9 +1,15 @@
-package principal;
+package classe_abstrata;
 
-import classe_abstrata.ContaCorrente;
-import classe_abstrata.ContaPoupanca;
+public class ContaPoupanca extends Conta {
+    @Override
+    public void sacar(double valor) {
+        if (valor <= saldo) {
+            saldo -= valor;
+        } else {
+            System.out.println("Saldo insuficiente!");
+        }
+    }
 
-public class Main {
     public static void main(String[] args) {
         ContaCorrente cc = new ContaCorrente();
         ContaPoupanca cp = new ContaPoupanca();
