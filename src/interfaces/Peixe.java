@@ -1,9 +1,11 @@
-package principal;
+package interfaces;
 
-import interfaces.Peixe;
-import interfaces.Triatleta;
+public class Peixe implements Nadador {
+    @Override
+    public void nadar() {
+        System.out.println("Peixe nadando...");
+    }
 
-public class Main {
     public static void main(String[] args) {
         Triatleta t = new Triatleta();
         Peixe p = new Peixe();
