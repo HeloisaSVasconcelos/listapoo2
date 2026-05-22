@@ -1,14 +1,18 @@
 package principal;
 
-import interfaces.Produto;
-import interfaces.Servico;
+import heranca.Animal;
+import heranca.Cachorro;
+import heranca.Gato;
 
 public class Main {
     public static void main(String[] args) {
-        Produto p = new Produto(100);
-        Servico s = new Servico(100);
+        Animal a1 = new Cachorro("Rex");
+        Animal a2 = new Gato("Mimi");
+        Animal a3 = new Cachorro("Thor");
 
-        System.out.println("Imposto Produto: " + p.calcularImposto());
-        System.out.println("Imposto Servico: " + s.calcularImposto());
+        // Executa o metodo do OBJETO REAL, nao da variavel.
+        a1.emitirSom();
+        a2.emitirSom();
+        a3.emitirSom();
     }
 }
