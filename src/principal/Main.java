@@ -2,12 +2,12 @@ package principal;
 
 public class Main {
     public static void main(String[] args) {
-        int nota = 8;
-        Integer notaObj = nota;
+        Integer x = null;
 
-        System.out.println("nota: " + nota);
-        System.out.println("notaObj: " + notaObj);
-        // Imprime o tipo da variavel
-        System.out.println("Tipo: " + notaObj.getClass().getSimpleName());
+        /* Da NullPointerException. O Java tenta fazer unboxing
+         (converter Integer para int), mas o valor e null.
+         Primitivo nao aceita null.
+         */
+        int y = x;
     }
 }
