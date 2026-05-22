@@ -12,12 +12,4 @@ public class Retangulo extends Forma {
     public double calcularArea() {
         return largura * altura;
     }
-
-    public static void main(String[] args) {
-        Circulo c = new Circulo(5);
-        Retangulo r = new Retangulo(4, 5);
-
-        System.out.println("Área Circulo: " + c.calcularArea());
-        System.out.println("Área Retângulo: " + r.calcularArea());
-    }
 }
