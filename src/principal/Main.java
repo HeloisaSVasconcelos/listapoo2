@@ -1,14 +1,16 @@
 package principal;
 
-import heranca.Funcionario;
-import heranca.Gerente;
+import classe_abstrata.Carro;
+import classe_abstrata.Moto;
 
 public class Main {
     public static void main(String[] args) {
-        Funcionario f = new Funcionario("Carlos", 3000);
-        Gerente g = new Gerente("Ana", 8000);
+        Carro c = new Carro("Ford");
+        Moto m = new Moto("Honda");
 
-        System.out.println(f.getNome() + " Bonus: " + f.calcularBonus());
-        System.out.println(g.getNome() + " Bonus: " + g.calcularBonus());
+        c.buzinar();
+        m.buzinar();
+
+        // new Veiculo("X"); -> ERRO nao pode instanciar classe abstrata
     }
 }
