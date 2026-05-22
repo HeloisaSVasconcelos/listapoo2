@@ -1,15 +1,14 @@
 package principal;
 
-import interfaces.Peixe;
-import interfaces.Triatleta;
+import interfaces.Produto;
+import interfaces.Servico;
 
 public class Main {
     public static void main(String[] args) {
-        Triatleta t = new Triatleta();
-        Peixe p = new Peixe();
+        Produto p = new Produto(100);
+        Servico s = new Servico(100);
 
-        t.nadar();
-        t.correr();
-        p.nadar();
+        System.out.println("Imposto Produto: " + p.calcularImposto());
+        System.out.println("Imposto Servico: " + s.calcularImposto());
     }
 }
