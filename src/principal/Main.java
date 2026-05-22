@@ -1,22 +1,21 @@
 package principal;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import heranca.Animal;
-import heranca.Cachorro;
-import heranca.Gato;
+import interfaces.Imprimivel;
+import interfaces.Nota;
+import interfaces.Relatorio;
 
 public class Main {
-    public static void main(String[] args) {
-        List<Animal> animais = new ArrayList<>();
-        animais.add(new Cachorro("Rex"));
-        animais.add(new Gato("Mimi"));
-        animais.add(new Cachorro("Thor"));
-        animais.add(new Gato("Luna"));
 
-        for (Animal a : animais) {
-            a.emitirSom();
-        }
+    public static void imprimirDocumento(Imprimivel doc) {
+        doc.imprimir();
+    }
+
+    public static void main(String[] args) {
+        /*
+         Chamando o metodo estatico passando objetos diferentes
+         que implementam a mesma interface Imprimivel.
+         */
+        imprimirDocumento(new Nota());
+        imprimirDocumento(new Relatorio());
     }
 }
