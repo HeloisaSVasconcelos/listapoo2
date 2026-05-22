@@ -1,14 +1,14 @@
 package principal;
 
-import heranca.Cachorro;
-import heranca.Gato;
+import heranca.Funcionario;
+import heranca.Gerente;
 
 public class Main {
     public static void main(String[] args) {
-        Cachorro c = new Cachorro("Rex");
-        Gato g = new Gato("Mimi");
+        Funcionario f = new Funcionario("Carlos", 3000);
+        Gerente g = new Gerente("Ana", 8000);
 
-        c.emitirSom();
-        g.emitirSom();
+        System.out.println(f.getNome() + " Bonus: " + f.calcularBonus());
+        System.out.println(g.getNome() + " Bonus: " + g.calcularBonus());
     }
 }
