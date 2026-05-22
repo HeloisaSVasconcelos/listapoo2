@@ -1,18 +1,22 @@
 package principal;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import heranca.Animal;
 import heranca.Cachorro;
 import heranca.Gato;
 
 public class Main {
     public static void main(String[] args) {
-        Animal a1 = new Cachorro("Rex");
-        Animal a2 = new Gato("Mimi");
-        Animal a3 = new Cachorro("Thor");
+        List<Animal> animais = new ArrayList<>();
+        animais.add(new Cachorro("Rex"));
+        animais.add(new Gato("Mimi"));
+        animais.add(new Cachorro("Thor"));
+        animais.add(new Gato("Luna"));
 
-        // Executa o metodo do OBJETO REAL, nao da variavel.
-        a1.emitirSom();
-        a2.emitirSom();
-        a3.emitirSom();
+        for (Animal a : animais) {
+            a.emitirSom();
+        }
     }
 }
