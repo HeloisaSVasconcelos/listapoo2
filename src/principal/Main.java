@@ -1,16 +1,14 @@
 package principal;
 
-import classe_abstrata.Carro;
-import classe_abstrata.Moto;
+import classe_abstrata.Circulo;
+import classe_abstrata.Retangulo;
 
 public class Main {
     public static void main(String[] args) {
-        Carro c = new Carro("Ford");
-        Moto m = new Moto("Honda");
+        Circulo c = new Circulo(5);
+        Retangulo r = new Retangulo(4, 5);
 
-        c.buzinar();
-        m.buzinar();
-
-        // new Veiculo("X"); -> ERRO nao pode instanciar classe abstrata
+        System.out.println("Area Circulo: " + c.calcularArea());
+        System.out.println("Area Retangulo: " + r.calcularArea());
     }
 }
