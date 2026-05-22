@@ -1,10 +1,14 @@
 package principal;
 
-import heranca.Carro;
+import heranca.Aluno;
+import heranca.Professor;
 
 public class Main {
     public static void main(String[] args) {
-        Carro c = new Carro("Toyota", 2022, 4);
-        c.ligar();
+        Aluno a = new Aluno("Joao", 20, "12345");
+        Professor p = new Professor("Maria", 40, "Matematica");
+
+        a.apresentar();
+        p.apresentar();
     }
 }
