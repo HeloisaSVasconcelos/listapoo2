@@ -1,19 +1,14 @@
 package principal;
 
-import classe_abstrata.ContaCorrente;
-import classe_abstrata.ContaPoupanca;
+import interfaces.Nota;
+import interfaces.Relatorio;
 
 public class Main {
     public static void main(String[] args) {
-        ContaCorrente cc = new ContaCorrente();
-        ContaPoupanca cp = new ContaPoupanca();
+        Nota n = new Nota();
+        Relatorio r = new Relatorio();
 
-        cc.depositar(100);
-        cc.sacar(150);
-        System.out.println("Saldo CC: " + cc.getSaldo());
-
-        cp.depositar(100);
-        cp.sacar(150);
-        System.out.println("Saldo CP: " + cp.getSaldo());
+        n.imprimir();
+        r.imprimir();
     }
 }
