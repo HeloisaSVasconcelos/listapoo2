@@ -1,15 +1,10 @@
 package principal;
 
-import java.math.BigDecimal;
+import heranca.Carro;
 
 public class Main {
     public static void main(String[] args) {
-        BigDecimal preco = new BigDecimal("49.90");
-        BigDecimal qtd = new BigDecimal("3");
-        BigDecimal desconto = new BigDecimal("0.95");
-
-        BigDecimal total = preco.multiply(qtd).multiply(desconto);
-
-        System.out.println("Total: R$ " + total);
+        Carro c = new Carro("Toyota", 2022, 4);
+        c.ligar();
     }
 }
