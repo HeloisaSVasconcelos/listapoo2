@@ -1,14 +1,14 @@
 package principal;
 
-import heranca.Aluno;
-import heranca.Professor;
+import heranca.Cachorro;
+import heranca.Gato;
 
 public class Main {
     public static void main(String[] args) {
-        Aluno a = new Aluno("Joao", 20, "12345");
-        Professor p = new Professor("Maria", 40, "Matematica");
+        Cachorro c = new Cachorro("Rex");
+        Gato g = new Gato("Mimi");
 
-        a.apresentar();
-        p.apresentar();
+        c.emitirSom();
+        g.emitirSom();
     }
 }
